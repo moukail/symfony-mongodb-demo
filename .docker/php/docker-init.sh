@@ -5,8 +5,6 @@ if [ ! -d "./public" ]; then
   . /home/install.sh
 fi
 
-#cp .env.local .env
-
 echo "--------------------------------------------------------------------"
 echo "-                            composer                              -"
 echo "--------------------------------------------------------------------"
@@ -18,39 +16,45 @@ symfony composer -n check-platform-reqs
 echo "-------------------------------------------------------------------"
 echo "-                        waiting for DB                           -"
 echo "-------------------------------------------------------------------"
-while ! nc -z $DATABASE_HOST $DATABASE_PORT; do sleep 1; done
+#while ! nc -z $DATABASE_HOST $DATABASE_PORT; do sleep 1; done
 
 echo "-------------------------------------------------------------------"
 echo "-                        prepare the DB                           -"
 echo "-------------------------------------------------------------------"
-symfony console doctrine:database:create --if-not-exists
-symfony console doctrine:migrations:migrate --no-interaction
-symfony console doctrine:fixtures:load --no-interaction -vvv
+symfony console doctrine:mongodb:schema:create
+#symfony console doctrine:migrations:migrate --no-interaction
+#symfony console doctrine:fixtures:load --no-interaction -vvv
 
 echo "-------------------------------------------------------------------"
 echo "-                        php-cs-fixer                             -"
 echo "-------------------------------------------------------------------"
-#php-cs-fixer fix ./src --rules=@Symfony --verbose --show-progress=estimating
+symfony composer phpcsfixer-fix
 
 echo "-------------------------------------------------------------------"
 echo "-                        phpstan                                  -"
 echo "-------------------------------------------------------------------"
-vendor/bin/phpstan analyse src
-#./vendor/bin/psalm
+symfony composer phpstan
+
 echo "-------------------------------------------------------------------"
-echo "-                        php-doc-check                            -"
+echo "-                        psalm                                    -"
 echo "-------------------------------------------------------------------"
-#vendor/bin/php-doc-check ./src
+vendor/bin/psalm-plugin
+symfony composer psalm
+
+echo "-------------------------------------------------------------------"
+echo "-                    phpinsights                                  -"
+echo "-------------------------------------------------------------------"
+symfony composer phpinsights
 
 echo "-------------------------------------------------------------------"
 echo "-                        phpcpd                                   -"
 echo "-------------------------------------------------------------------"
-#phpcpd --no-interaction src
+symfony composer phpcpd
 
 echo "-------------------------------------------------------------------"
 echo "-                        PHPMD                                    -"
 echo "-------------------------------------------------------------------"
-#phpmd ./src text codesize,unusedcode,naming,design,controversial,cleancode
+symfony composer phpmd
 
 echo "-------------------------------------------------------------------"
 echo "-                            benchmarks                           -"

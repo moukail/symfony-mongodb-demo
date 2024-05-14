@@ -7,6 +7,9 @@ RUN apk --update --no-cache add bash wget gcc g++ make autoconf linux-headers op
 RUN docker-php-ext-install -j$(nproc) pdo_mysql
 RUN docker-php-ext-enable opcache
 
+# mongodb
+RUN pecl install mongodb && docker-php-ext-enable mongodb
+
 # ext-intl
 #RUN apk --update --no-cache add icu-dev && docker-php-ext-install -j$(nproc) intl
 
@@ -22,7 +25,7 @@ RUN docker-php-ext-enable opcache
 #RUN pecl install amqp && docker-php-ext-enable amqp
 
 # For Xdebug >=3.2 support PHP 8.0
-RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN pecl install xdebug mongodb && docker-php-ext-enable xdebug mongodb
 
 # For Xdebug 3
 RUN echo $'zend_extension=xdebug.so \n\
@@ -41,6 +44,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ 
 
 # Symfony CLI
 RUN wget https://get.symfony.com/cli/installer -O - | bash && mv /root/.symfony5/bin/symfony /usr/bin/symfony
+
+# PHP Copy/Paste Detector
+RUN wget https://phar.phpunit.de/phpcpd.phar -O /usr/bin/phpcpd && chmod a+x /usr/bin/phpcpd
 
 ### Codeception
 RUN wget http://codeception.com/codecept.phar -O /usr/bin/codecept && chmod a+x /usr/bin/codecept

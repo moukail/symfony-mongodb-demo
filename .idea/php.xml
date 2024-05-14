@@ -3,7 +3,16 @@
   <component name="LaravelPintOptionsConfiguration">
     <option name="ruleset" value="laravel" />
   </component>
+  <component name="MessDetector">
+    <phpmd_settings>
+      <MessDetectorConfiguration tool_path="$PROJECT_DIR$/web/vendor/bin/phpmd" />
+    </phpmd_settings>
+  </component>
   <component name="MessDetectorOptionsConfiguration">
+    <option name="codeSize" value="true" />
+    <option name="controversial" value="true" />
+    <option name="design" value="true" />
+    <option name="naming" value="true" />
     <option name="transferred" value="true" />
   </component>
   <component name="PHPCSFixerOptionsConfiguration">
@@ -12,6 +21,11 @@
   <component name="PHPCodeSnifferOptionsConfiguration">
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpCSFixer">
+    <phpcsfixer_settings>
+      <PhpCSFixerConfiguration tool_path="$PROJECT_DIR$/web/vendor/bin/php-cs-fixer" />
+    </phpcsfixer_settings>
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
@@ -81,6 +95,109 @@
       <path value="$PROJECT_DIR$/web/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/web/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/web/vendor/composer" />
+      <path value="$PROJECT_DIR$/web/vendor/league/container" />
+      <path value="$PROJECT_DIR$/web/vendor/league/factory-muffin-faker" />
+      <path value="$PROJECT_DIR$/web/vendor/amphp/byte-stream" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/web/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/web/vendor/amphp/amp" />
+      <path value="$PROJECT_DIR$/web/vendor/friendsofphp/php-cs-fixer" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/web/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/web/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/module-datafactory" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/module-rest" />
+      <path value="$PROJECT_DIR$/web/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/lib-xml" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/verify" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/module-doctrine2" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/lib-web" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/specify" />
+      <path value="$PROJECT_DIR$/web/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/web/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/module-phpbrowser" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/module-symfony" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/stub" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/codeception" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/module-asserts" />
+      <path value="$PROJECT_DIR$/web/vendor/netresearch/jsonmapper" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/lib-asserts" />
+      <path value="$PROJECT_DIR$/web/vendor/codeception/lib-innerbrowser" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/web/vendor/phpmetrics/phpmetrics" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/web/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/web/vendor/jean85/pretty-package-versions" />
+      <path value="$PROJECT_DIR$/web/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/web/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/web/vendor/softcreatr/jsonpath" />
+      <path value="$PROJECT_DIR$/web/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/web/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/web/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/web/vendor/psalm/plugin-symfony" />
+      <path value="$PROJECT_DIR$/web/vendor/cmgmyr/phploc" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/mongodb-odm-bundle" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/mongodb-odm" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/web/vendor/phpmd/phpmd" />
+      <path value="$PROJECT_DIR$/web/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/web/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/web/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/web/vendor/slevomat/coding-standard" />
+      <path value="$PROJECT_DIR$/web/vendor/nunomaduro/phpinsights" />
+      <path value="$PROJECT_DIR$/web/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/web/vendor/phpstan/phpstan-symfony" />
+      <path value="$PROJECT_DIR$/web/vendor/phpstan/phpstan-doctrine" />
+      <path value="$PROJECT_DIR$/web/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/web/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/web/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <path value="$PROJECT_DIR$/web/vendor/phpstan/extension-installer" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/web/vendor/felixfbecker/advanced-json-rpc" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/web/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/web/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/web/vendor/felixfbecker/language-server-protocol" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/web/vendor/php-parallel-lint/php-parallel-lint" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/web/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/web/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/web/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/web/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/web/vendor/vimeo/psalm" />
+      <path value="$PROJECT_DIR$/web/vendor/mongodb/mongodb" />
+      <path value="$PROJECT_DIR$/web/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/web/vendor/behat/gherkin" />
+      <path value="$PROJECT_DIR$/web/vendor/spatie/array-to-xml" />
+      <path value="$PROJECT_DIR$/web/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/web/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/web/vendor/pdepend/pdepend" />
+      <path value="$PROJECT_DIR$/web/vendor/fidry/cpu-core-counter" />
+      <path value="$PROJECT_DIR$/web/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/web/vendor/league/factory-muffin" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

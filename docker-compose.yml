@@ -12,9 +12,9 @@ services:
       - ./web:/var/www
       #- vendor:/var/www/vendor
     env_file:
-      - ./web/.env
+      #- ./web/.env
       - ./.env
-      - ./web/.env.local
+      #- ./web/.env.local
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
@@ -28,7 +28,7 @@ services:
     tty: true
 
   database:
-    image: mysql:8.1
+    image: mongo
     container_name: $DATABASE_HOST
     restart: unless-stopped
     ports:
@@ -36,12 +36,12 @@ services:
     expose:
       - $DATABASE_PORT
     volumes:
-      - database:/var/lib/mysql
-      - ./certs:/etc/mysql/certs
-      #- ./.docker/data:/docker-entrypoint-initdb.d
+      - type: bind
+        source: ./data
+        target: /data/db
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=$DATABASE_NAME
+      - MONGO_INITDB_ROOT_USERNAME=$DATABASE_USER
+      - MONGO_INITDB_ROOT_PASSWORD=$DATABASE_PASSWORD
     networks:
       - traefik_net
 

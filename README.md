@@ -1,3 +1,7 @@
+https://github.com/oasmobile/php-dynamodb-odm
+https://www.doctrine-project.org/projects/doctrine-mongodb-odm/en/2.5/tutorials/getting-started.html
+https://www.doctrine-project.org/projects/doctrine-mongodb-bundle/en/latest/index.html
+
 # Composer
 ```bash
 composer audit
