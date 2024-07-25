@@ -6,7 +6,6 @@ use App\Document\Artist;
 use Doctrine\Bundle\MongoDBBundle\ManagerRegistry;
 use Doctrine\Bundle\MongoDBBundle\Repository\ServiceDocumentRepository;
 use Doctrine\ODM\MongoDB\MongoDBException;
-use Doctrine\ODM\MongoDB\Repository\DocumentRepository;
 
 class ArtistRepository extends ServiceDocumentRepository
 {

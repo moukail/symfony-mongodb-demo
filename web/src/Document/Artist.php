@@ -11,12 +11,12 @@ class Artist
     #[ODM\Id]
     private $id;
 
-    #[ODM\Field(type: "string")]
+    #[ODM\Field(type: 'string')]
     private $name;
 
-    #[ODM\Field(type: "string")]
+    #[ODM\Field(type: 'string')]
     private $email;
 
-    #[ODM\Field(type: "string")]
+    #[ODM\Field(type: 'string')]
     private $phoneNumber;
 }

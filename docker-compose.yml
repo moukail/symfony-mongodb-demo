@@ -37,7 +37,7 @@ services:
       - $DATABASE_PORT
     volumes:
       - type: bind
-        source: ./data
+        source: ./.data
         target: /data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=$DATABASE_USER
